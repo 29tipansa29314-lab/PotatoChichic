@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Potato Chichic | PATTAYA CHEESY BITES</title>
+
+    <meta name="description" content="Potato Chichic ร้านของทอดสายชีสสเปเชียลตี้ในพัทยา ชีสยืดสะใจ ทอดใหม่ร้อนๆ ส่งตรงถึงหน้าบ้าน">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Arial", "Tahoma", sans-serif;
+            background: #fffaf2;
+            color: #3b2a20;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            padding: 12px 5%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #8b4513;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #4a3428;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #d47b20;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(rgba(40,20,5,0.35), rgba(40,20,5,0.45)),
+                url("banner.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+            background: rgba(0,0,0,0.28);
+            padding: 45px 35px;
+            border-radius: 30px;
+            backdrop-filter: blur(3px);
+        }
+
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 10px;
+            text-shadow: 2px 3px 8px rgba(0,0,0,0.4);
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 4vw, 34px);
+            color: #ffe39a;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .hero-highlight {
+            font-size: 21px;
+            font-weight: bold;
+            color: #fff2b8;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            margin: 7px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .button-facebook {
+            background: #1877f2;
+            color: white;
+        }
+
+        .button-instagram {
+            background: #e1306c;
+            color: white;
+        }
+
+        .button-menu {
+            background: #f5a623;
+            color: white;
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            padding: 80px 6%;
+        }
+
+        .section-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(30px, 5vw, 45px);
+            color: #7b3f00;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #806d60;
+            font-size: 17px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #fff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 12px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features {
+            background: #fff4dc;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .feature-card-content {
+            padding: 25px;
+        }
+
+        .feature-card h3 {
+            color: #8b4513;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        /* =========================
+           TARGET CUSTOMERS
+        ========================= */
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .target-card {
+            background: #fff;
+            border: 2px solid #f2d3a2;
+            border-radius: 25px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .target-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .target-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .target-card h3 {
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           VIDEO
+        ========================= */
+
+        .video-section {
+            background: #3a2418;
+            color: white;
+        }
+
+        .video-section .section-title h2 {
+            color: #ffd36a;
+        }
+
+        .video-section .section-title p {
+            color: #f4e7d5;
+        }
+
+        .youtube-video {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+        }
+
+        .youtube-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* =========================
+           MENU
+        ========================= */
+
+        .menu-section {
+            background: #fffaf2;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 42% 58%;
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            object-fit: cover;
+        }
+
+        .menu-content {
+            padding: 35px;
+        }
+
+        .menu-content h3 {
+            color: #7b3f00;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: #f5a623;
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .recommend {
+            background: #fff3d6;
+            border-left: 5px solid #f5a623;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* =========================
+           SIZES
+        ========================= */
+
+        .sizes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .size-card {
+            background: #fff4dc;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid #f2d3a2;
+        }
+
+        .size-card h3 {
+            font-size: 27px;
+            color: #8b4513;
+        }
+
+        /* =========================
+           SOCIAL
+        ========================= */
+
+        .social-section {
+            background: #fff0d0;
+            text-align: center;
+        }
+
+        .social-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-card {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #3b2a20;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .facebook {
+            color: #1877f2;
+        }
+
+        .instagram {
+            color: #e1306c;
+        }
+
+        /* =========================
+           ORDER
+        ========================= */
+
+        .order-section {
+            background:
+                linear-gradient(rgba(70,35,10,0.8), rgba(70,35,10,0.8)),
+                url("potato.jpg") center/cover;
+            text-align: center;
+            color: white;
+        }
+
+        .order-section h2 {
+            font-size: clamp(30px, 5vw, 45px);
+            color: #ffd36a;
+            margin-bottom: 15px;
+        }
+
+        .order-section p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .delivery-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .delivery-card {
+            background: white;
+            color: #3b2a20;
+            padding: 20px 30px;
+            border-radius: 20px;
+            min-width: 180px;
+            font-weight: bold;
+        }
+
+        .delivery-card span {
+            display: block;
+            font-size: 35px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #24150f;
+            color: #eee;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        footer h3 {
+            color: #ffd36a;
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: #ffd36a;
+            text-decoration: none;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-menu {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                padding: 35px 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid,
+            .target-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-card {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-card img {
+                min-height: 260px;
+            }
+
+            .sizes {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+        <div class="nav-container">
+
+            <a href="#home" class="nav-logo">
+                <img src="logo.jpg" alt="Potato Chichic Logo">
+                Potato Chichic
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#about">เกี่ยวกับร้าน</a></li>
+                <li><a href="#target">กลุ่มลูกค้า</a></li>
+                <li><a href="#menu">เมนู</a></li>
+                <li><a href="#video">วิดีโอ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <img src="logo.jpg"
+                 alt="Potato Chichic"
+                 class="hero-logo">
+
+            <h1>Potato Chichic</h1>
+
+            <h2>✨ PATTAYA CHEESY BITES ✨</h2>
+
+            <p>
+                ร้านของทอดสายชีสสเปเชียลตี้เสิร์ฟความอร่อยร้อนๆ
+                ในพัทยา!
+            </p>
+
+            <p class="hero-highlight">
+                🧀 ชีสยืดสะใจ อร่อยฟินถึงหน้าบ้าน! 🍟
+            </p>
+
+            <p>
+                ฟินกับ "มันฝรั่งทอดยัดไส้ผักโขมอบชีส"
+                และ "ข้าวโพดชีส" ไส้แน่น นัวเข้มข้น
+                คลุกผงหลากรสชาติได้ตามใจ
+            </p>
+
+            <p>
+                <strong>Size S | M | L</strong>
+            </p>
+
+            <a href="https://www.facebook.com/profile.php?id=61591413239620"
+               target="_blank"
+               class="button button-facebook">
+                💬 สั่งซื้อผ่าน Facebook
+            </a>
+
+            <a href="#menu"
+               class="button button-menu">
+                🧀 ดูเมนู
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT BUSINESS
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>ABOUT THE BUSINESS</h2>
+
+                <p>
+                    ร้านของทอดสายชีสสเปเชียลตี้
+                    พร้อมเสิร์ฟความอร่อยถึงหน้าบ้าน
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <img src="potato.jpg"
+                     alt="Potato Chichic เมนูมันฝรั่งทอด"
+                     class="about-image">
+
+                <div class="about-text">
+
+                    <h3>ข้อมูลธุรกิจ 🥔🧀</h3>
+
+                    <p>
+                        ร้านของทอดสายชีสสเปเชียลตี้
+                        พร้อมเสิร์ฟความอร่อย ทอดใหม่ ร้อนๆ ยืดๆ
+                    </p>
+
+                    <p>
+                        โดยเน้นวัตถุดิบคุณภาพ รสชาติเข้มข้น
+                        และความสะดวกในการสั่งซื้อ
+                        ส่งตรงถึงบ้านคุณ
+                    </p>
+
+                    <p>
+                        เมนูไฮไลต์ของร้าน ได้แก่
+                        "มันฝรั่งทอดยัดไส้ผักโขมอบชีส"
+                        และ "ข้าวโพดชีส"
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT FEATURES
+    ========================== -->
+
+    <section class="features">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>เกี่ยวกับร้าน</h2>
+
+                <p>
+                    จุดเด่นที่ทำให้ Potato Chichic แตกต่าง
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <img src="foodtruck.jpg"
+                         alt="Food Truck Potato Chichic">
+
+                    <div class="feature-card-content">
+
+                        <h3>🏪 เกี่ยวกับร้าน</h3>
+
+                        <p>
+                            ร้านเราเน้นเสิร์ฟเมนูของทอด
+                            สไตล์ชีสสเปเชียลตี้
+                            ที่พิถีพิถันเรื่องวัตถุดิบและความอร่อย
+                        </p>
+
+                        <p>
+                            มีเมนูไฮไลต์อย่าง
+                            มันฝรั่งทอดยัดไส้ผักโขมอบชีส
+                            และข้าวโพดชีส
+                            ทอดใหม่ร้อนๆ ทุกออเดอร์
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <img src="spices.jpg"
+                         alt="ผงคลุกหลากรสชาติ">
+
+                    <div class="feature-card-content">
+
+                        <h3>🌶️ จุดเด่นของเรา</h3>
+
+                        <p>
+                            นอกจากไส้ชีสแน่นๆ ยืดสะใจแล้ว
+                            ร้านเรายังมี
+                            <strong>"ผงคลุกหลากรสชาติ"</strong>
+                            ให้เลือกมิกซ์แอนด์แมตช์
+                            ความอร่อยได้ตามใจชอบ
+                        </p>
+
+                        <p>
+                            จะสายเข้มข้น นัวๆ หรือแซ่บจัดจ้าน
+                            ก็เลือกปรับรสชาติได้ไม่ซ้ำ
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <img src="potato.jpg"
+                         alt="บริการ Delivery">
+
+                    <div class="feature-card-content">
+
+                        <h3>🛵 Delivery ทั่วพัทยา</h3>
+
+                        <p>
+                            ทอดเสร็จส่งทันที
+                            ให้คุณได้ฟินกับชีสยืดๆ ร้อนๆ
+                            เหมือนทานที่ร้าน
+                        </p>
+
+                        <p>
+                            สั่งซื้อและสอบถามรายละเอียดได้ง่ายๆ
+                            ผ่าน Facebook หรือแอปเดลิเวอรี่
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TARGET CUSTOMERS
+    ========================== -->
+
+    <section id="target">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>TARGET CUSTOMERS</h2>
+
+                <p>
+                    ตอบโจทย์ทุกสายทานเล่น
+                    ของว่าง และปาร์ตี้
+                </p>
+
+            </div>
+
+
+            <div class="target-grid">
+
+                <div class="target-card">
+
+                    <div class="target-icon">🎒</div>
+
+                    <h3>สายทานเล่น & ของว่าง</h3>
+
+                    <p>
+                        สำหรับคนที่มองหาของว่างทานเล่นระหว่างวัน
+                        ทานเพลินๆ ตอนทำงาน ดูซีรีส์
+                        หรือแก้หิวช่วงบ่าย
+                    </p>
+
+                    <p>
+                        <strong>แนะนำ Size S</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="target-card">
+
+                    <div class="target-icon">🧀</div>
+
+                    <h3>สายชีสเลิฟเวอร์</h3>
+
+                    <p>
+                        เหมาะสำหรับคนรักชีสที่ชอบความยืด
+                        ไส้แน่น รสชาติเข้มข้น
+                        หอมนัวผักโขมอบชีส
+                        และข้าวโพดชีส
+                    </p>
+
+                </div>
+
+
+                <div class="target-card">
+
+                    <div class="target-icon">🥳</div>
+
+                    <h3>สายปาร์ตี้ & สังสรรค์</h3>
+
+                    <p>
+                        สำหรับกลุ่มเพื่อน ครอบครัว
+                        หรือสายปาร์ตี้ที่มองหาของทอด
+                        จานโปรดทานร่วมกัน
+                    </p>
+
+                    <p>
+                        <strong>แนะนำ Size M หรือ L</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VIDEO
+    ========================== -->
+
+    <section class="video-section" id="video">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>🎥 CONTENT HIGHLIGHT</h2>
+
+                <p>
+                    ชมคอนเทนต์ความอร่อยของ Potato Chichic
+                </p>
+
+            </div>
+
+
+            <div class="youtube-video">
+
+                <iframe
+                    src="https://www.youtube.com/embed/0C47CvI4-Mw"
+                    title="Potato Chichic - PATTAYA CHEESY BITES"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MENU
+    ========================== -->
+
+    <section class="menu-section" id="menu">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>MENU HIGHLIGHTS</h2>
+
+                <p>
+                    อร่อยฟิน ยืดทุกคำ ทอดใหม่ร้อนๆ
+                    พร้อมเสิร์ฟถึงบ้านคุณ!
+                </p>
+
+            </div>
+
+
+            <!-- MENU 1 -->
+
+            <div class="menu-card">
+
+                <img src="spinach.jpg"
+                     alt="มันฝรั่งทอดยัดไส้ผักโขมอบชีส">
+
+                <div class="menu-content">
+
+                    <h3>
+                        🥬 มันฝรั่งทอดยัดไส้ผักโขมอบชีส
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Spinach Cheese Stuffed Potato
+                        </strong>
+                    </p>
+
+                    <p>
+                        ความอร่อยที่ลงตัวระหว่างความกรอบนุ่ม
+                        และหอมกลมกล่อม!
+                    </p>
+
+                    <p>
+                        เนื้อมันฝรั่งบดเนียนนุ่ม
+                        ห่อหุ้มไส้ผักโขมผัดครีมซอสสูตรเข้มข้น
+                        อัดแน่นด้วยมอสซาเรลล่าชีสคุณภาพเยี่ยม
+                        นำไปทอดจนแป้งด้านนอกกรอบทอง
+                        แต่ด้านในยังคงความฉ่ำ
+                        ชีสยืดสะใจ
+                    </p>
+
+                    <div class="rating">
+                        ⭐️⭐️⭐️⭐️⭐️
+                    </div>
+
+                    <p>
+                        <strong>
+                            เมนูขายดีอันดับ 1!
+                        </strong>
+                    </p>
+
+                    <div class="recommend">
+
+                        <strong>
+                            🧀 มิกซ์แอนด์แมตช์ผงคลุก
+                        </strong>
+
+                        <br>
+
+                        แนะนำคลุก
+                        <strong>ผงชีส</strong>
+                        เพิ่มความนัว
+
+                        หรือ
+
+                        <strong>
+                            ผงปาปริก้า / วิงก์แซ่บ
+                        </strong>
+
+                        ช่วยตัดเลี่ยนได้อย่างลงตัว
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENU 2 -->
+
+            <div class="menu-card">
+
+                <img src="corn.jpg"
+                     alt="ข้าวโพดชีส">
+
+                <div class="menu-content">
+
+                    <h3>
+                        🌽 ข้าวโพดชีส
+                    </h3>
+
+                    <p>
+                        <strong>
+                            Corn Cheese Delight
+                        </strong>
+                    </p>
+
+                    <p>
+                        สายหวานนัว หอมมัน ต้องไม่พลาดเมนูนี้!
+                    </p>
+
+                    <p>
+                        เมนูโปรดของทุกวัย
+                        ที่จับคู่ความหวานฉ่ำของเมล็ดข้าวโพดหวาน
+                        เข้ากับชีสยืดๆ หอมเนยแบบจัดเต็ม
+                        ทอดเสร็จใหม่ๆ ได้ความกรอบนอก นุ่มใน
+                        คำไหนก็สัมผัสได้ถึงความหวานหอม
+                        ของข้าวโพดและความยืดของชีส
+                    </p>
+
+                    <div class="rating">
+                        ⭐️⭐️⭐️⭐️⭐️
+                    </div>
+
+                    <p>
+                        <strong>
+                            เด็กทานได้ ผู้ใหญ่ทานเพลิน!
+                        </strong>
+                    </p>
+
+                    <div class="recommend">
+
+                        <strong>
+                            🌽 มิกซ์แอนด์แมตช์ผงคลุก
+                        </strong>
+
+                        <br>
+
+                        แนะนำคลุก
+                        <strong>ผงบาร์บีคิว</strong>
+                        เพิ่มความกลมกล่อม
+
+                        หรือ
+
+                        <strong>ผงชีส</strong>
+                        เสริมความหอมมัน x2
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIZES -->
+
+            <div class="section-title">
+
+                <h2>📦 เลือกขนาดความฟิน</h2>
+
+                <p>
+                    Sizes Available
+                </p>
+
+            </div>
+
+
+            <div class="sizes">
+
+                <div class="size-card">
+
+                    <h3>Size S</h3>
+
+                    <p>
+                        อิ่มชิลๆ คนเดียว
+                        ทานเป็นของว่างยามบ่าย
+                    </p>
+
+                </div>
+
+
+                <div class="size-card">
+
+                    <h3>Size M</h3>
+
+                    <p>
+                        อิ่มกำลังดี
+                        จัดเต็มความอร่อยช่วงดูซีรีส์
+                    </p>
+
+                </div>
+
+
+                <div class="size-card">
+
+                    <h3>Size L</h3>
+
+                    <p>
+                        ไซส์ใหญ่จุใจ
+                        เหมาะสำหรับแชร์ความอร่อย
+                        ในปาร์ตี้กับเพื่อนๆ
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY US
+    ========================== -->
+
+    <section>
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>✨ WHY POTATO CHICHIC?</h2>
+
+                <p>
+                    ความฟินที่เราอยากส่งต่อให้ทุกคน
+                </p>
+
+            </div>
+
+
+            <div class="target-grid">
+
+                <div class="target-card">
+
+                    <div class="target-icon">🔥</div>
+
+                    <h3>ทอดใหม่ทุกออเดอร์</h3>
+
+                    <p>
+                        เสิร์ฟความร้อน กรอบนอก
+                        นุ่มใน พร้อมชีสยืดๆ
+                    </p>
+
+                </div>
+
+
+                <div class="target-card">
+
+                    <div class="target-icon">🧂</div>
+
+                    <h3>เลือกผงได้ตามใจ</h3>
+
+                    <p>
+                        มิกซ์แอนด์แมตช์รสชาติ
+                        ได้ตามสไตล์ของคุณ
+                    </p>
+
+                </div>
+
+
+                <div class="target-card">
+
+                    <div class="target-icon">🛵</div>
+
+                    <h3>ส่งตรงทั่วพัทยา</h3>
+
+                    <p>
+                        สั่งง่าย สะดวก
+                        ส่งตรงถึงหน้าบ้าน
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ORDER
+    ========================== -->
+
+    <section class="order-section" id="contact">
+
+        <div class="section-container">
+
+            <h2>
+                🧀 ชีสยืดสะใจ ทอดใหม่ร้อนๆ
+            </h2>
+
+            <p>
+                ส่งตรงถึงหน้าบ้านคุณทั่วพัทยา! 🛵✨
+            </p>
+
+            <p>
+                ฟินกับมันฝรั่งทอดยัดไส้ผักโขมอบชีส
+                และข้าวโพดชีส
+            </p>
+
+
+            <a href="https://www.facebook.com/profile.php?id=61591413239620"
+               target="_blank"
+               class="button button-facebook">
+                💬 Facebook
+            </a>
+
+
+            <a href="https://www.instagram.com/potato.chichic?igsh=d2x6b2RpeWFhNGh0"
+               target="_blank"
+               class="button button-instagram">
+                📷 Instagram
+            </a>
+
+
+            <div class="delivery-grid">
+
+                <div class="delivery-card">
+
+                    <span>🛵</span>
+
+                    LINE MAN
+
+                </div>
+
+
+                <div class="delivery-card">
+
+                    <span>🛵</span>
+
+                    Grab
+
+                </div>
+
+
+                <div class="delivery-card">
+
+                    <span>📱</span>
+
+                    สั่งง่าย ส่งถึงบ้าน
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOCIAL
+    ========================== -->
+
+    <section class="social-section">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>FOLLOW US</h2>
+
+                <p>
+                    ติดตาม Potato Chichic
+                    และอัปเดตเมนูใหม่ๆ
+                </p>
+
+            </div>
+
+
+            <div class="social-grid">
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=61591413239620"
+                    target="_blank"
+                    class="social-card facebook">
+
+                    📘 Facebook
+
+                    <br>
+
+                    Potato Chichic
+
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/potato.chichic?igsh=d2x6b2RpeWFhNGh0"
+                    target="_blank"
+                    class="social-card instagram">
+
+                    📷 Instagram
+
+                    <br>
+
+                    @potato.chichic
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <img src="logo.jpg"
+             alt="Potato Chichic Logo">
+
+        <h3>
+            Potato Chichic
+        </h3>
+
+        <p>
+            PATTAYA CHEESY BITES
+        </p>
+
+        <p>
+            🧀 ชีสยืดสะใจ อร่อยฟินถึงหน้าบ้าน! 🍟
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 Potato Chichic
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
